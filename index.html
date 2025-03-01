@@ -11,21 +11,19 @@
             background-color: black;
         }
         .container {
-            display: grid;
-            place-items: center;
+            position: relative;
             width: 100vw;
             height: 100vh;
             background-image: url('AlbedoBase_XL_una_biblioteca_futurista_ambientada_en_un_mundo_0.jpg');
             background-size: cover;
             background-position: center;
-            position: relative;
         }
         .interactive-area {
             position: absolute;
-            top: 60%; /* Ajusta este valor según sea necesario */
-            left: 65%; /* Ajusta este valor según sea necesario */
-            width: 80px; /* Tamaño fijo en píxeles */
-            height: 40px; /* Tamaño fijo en píxeles */
+            top: 60vh; /* Proporción del viewport */
+            left: 65vw; /* Proporción del viewport */
+            width: 80px; /* Ancho fijo */
+            height: 40px; /* Alto fijo */
             background: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
             transition: all 0.3s ease;
