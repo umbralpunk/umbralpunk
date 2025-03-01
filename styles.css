@@ -26,13 +26,64 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
+/* Efecto hover para los elementos interactivos */
 .interactive:hover {
     transform: scale(1.1);
     filter: drop-shadow(0 0 10px cyan);
 }
 
-/* Ajusta estas posiciones manualmente para que coincidan con tu imagen */
-#pantalla1 { top: 20%; left: 30%; width: 10%; height: 15%; }
-#pantalla2 { top: 22%; left: 50%; width: 10%; height: 15%; }
-#pantalla3 { top: 25%; left: 70%; width: 10%; height: 15%; }
-#personaje { bottom: 10%; left: 45%; width: 15%; height: 30%; }
+/* Ajustes responsivos usando porcentajes para la posición y tamaño */
+#pantalla1 {
+    top: 20%; /* Posición en porcentaje */
+    left: 30%;
+    width: 10%;
+    height: auto; /* Altura automática para mantener proporciones */
+}
+
+#pantalla2 {
+    top: 22%; 
+    left: 50%;
+    width: 10%;
+    height: auto;
+}
+
+#pantalla3 {
+    top: 25%;
+    left: 70%;
+    width: 10%;
+    height: auto;
+}
+
+#personaje {
+    bottom: 10%;
+    left: 45%;
+    width: 15%;
+    height: auto;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 600px) {
+    #pantalla1, #pantalla2, #pantalla3, #personaje {
+        width: 20%; /* Aumentar el tamaño en pantallas pequeñas */
+    }
+
+    #pantalla1 {
+        top: 30%; /* Ajustar la posición */
+        left: 10%;
+    }
+
+    #pantalla2 {
+        top: 35%; 
+        left: 40%;
+    }
+
+    #pantalla3 {
+        top: 40%;
+        left: 70%;
+    }
+
+    #personaje {
+        bottom: 15%;
+        left: 35%;
+    }
+}
