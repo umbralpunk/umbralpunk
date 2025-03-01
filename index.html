@@ -4,16 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca Cyberpunk</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .interactive-area {
+            position: absolute;
+            top: 732px; /* Coordenada Y */
+            left: 665px; /* Coordenada X */
+            width: 96px; /* Ancho calculado */
+            height: 79px; /* Alto calculado */
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .interactive-area:hover {
+            background: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+    </style>
 </head>
 <body>
-    <div id="scene">
-        <img src="AlbedoBase_XL_una_biblioteca_futurista_ambientada_en_un_mundo_0.jpg" id="background" alt="Biblioteca futurista">
-        <div id="pantalla1" class="interactive" data-text="Ensayo 1"></div>
-        <div id="pantalla2" class="interactive" data-text="Ensayo 2"></div>
-        <div id="pantalla3" class="interactive" data-text="Ensayo 3"></div>
-        <div id="personaje" class="interactive" data-text="Biografía"></div>
+    <div class="container">
+        <img src="AlbedoBase_XL_una_biblioteca_futurista_ambientada_en_un_mundo_0.jpg" alt="Biblioteca Cyberpunk" class="image">
+        <a href="ensayo1.html" class="interactive-area"></a>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
