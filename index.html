@@ -20,21 +20,30 @@
         }
         .interactive-area {
             position: absolute;
-            top: 60vh; /* Proporción del viewport */
-            left: 65vw; /* Proporción del viewport */
-            width: 80px; /* Ancho fijo */
-            height: 40px; /* Alto fijo */
+            top: 60%; /* Proporción del viewport */
+            left: 65%; /* Proporción del viewport */
+            width: 10%; /* Ancho relativo */
+            max-width: 120px; /* Ancho máximo */
+            height: auto; /* Alto automático para mantener proporciones */
+            padding: 10px; /* Espaciado interno */
             background: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
             transition: all 0.3s ease;
             text-align: center; /* Alinea el texto */
-            line-height: 40px; /* Centra el texto verticalmente */
             color: black; /* Color del texto */
             text-decoration: none; /* Sin subrayado */
         }
         .interactive-area:hover {
             background: rgba(255, 255, 255, 0.5);
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+        @media (max-width: 600px) {
+            .interactive-area {
+                top: 70%; /* Ajuste para pantallas pequeñas */
+                left: 50%; /* Centrar horizontalmente */
+                transform: translateX(-50%); /* Centrar horizontalmente */
+                width: 80%; /* Aumentar el tamaño en pantallas pequeñas */
+            }
         }
     </style>
 </head>
